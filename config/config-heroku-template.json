@@ -322,7 +322,7 @@
       "Scope": "${GOOGLE_SETTINGS__SCOPE}",
       "AuthEndpoint": "${GOOGLE_SETTINGS__AUTH_ENDPOINT}",
       "TokenEndpoint": "${GOOGLE_SETTINGS__TOKEN_ENDPOINT}",
-      "UserApiEndpoint": "${GOOGLE_SETTINGS__USER_ENDPOINT}"
+      "UserApiEndpoint": "${GOOGLE_SETTINGS__USER_ENDPOINT}",
       "DiscoveryEndpoint": "",
       "ButtonText": "",
       "ButtonColor": ""
