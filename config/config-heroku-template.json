@@ -102,16 +102,16 @@
       "EnableCustomGroups": true
     },
     "TeamSettings": {
-      "SiteName": "Mattermost",
+      "SiteName": "${CUSTOM_BRAND__NAME}",
       "MaxUsersPerTeam": 50,
       "EnableUserCreation": true,
       "EnableOpenServer": false,
       "EnableUserDeactivation": false,
       "RestrictCreationToDomains": "",
       "EnableCustomUserStatuses": true,
-      "EnableCustomBrand": false,
-      "CustomBrandText": "",
-      "CustomDescriptionText": "",
+      "EnableCustomBrand": ${CUSTOM_BRAND__ENABLED},
+      "CustomBrandText": "${CUSTOM_BRAND__TEXT}",
+      "CustomDescriptionText": "${CUSTOM_BRAND__DESCRIPTION}",
       "RestrictDirectMessage": "any",
       "UserStatusAwayTimeout": 300,
       "MaxChannelsPerTeam": 2000,
@@ -240,9 +240,9 @@
       "EnablePreviewModeBanner": true,
       "SkipServerCertificateVerification": false,
       "EmailNotificationContentsType": "full",
-      "LoginButtonColor": "#0000",
-      "LoginButtonBorderColor": "#2389D7",
-      "LoginButtonTextColor": "#2389D7",
+      "LoginButtonColor": "${EMAIL_SETTINGS__BUTTON_COLOR}",
+      "LoginButtonBorderColor": "${EMAIL_SETTINGS__BUTTON_BORDER_COLOR}",
+      "LoginButtonTextColor": "${EMAIL_SETTINGS__BUTTON_TEXT_COLOR}",
       "EnableInactivityEmail": true
     },
     "RateLimitSettings": {
