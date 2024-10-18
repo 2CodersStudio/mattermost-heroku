@@ -19,10 +19,10 @@ echo "-----> Retrieving mattermost tar from ${DOWNLOAD_URI}"
 curl -s -L "${DOWNLOAD_URI}" | tar -zxf - --strip-components=1 -C ${BUILD_DIR}
 
 echo "-----> Remove large plugins not required"
-rm prepackaged_plugins/mattermost-plugin-msteams-*
-rm prepackaged_plugins/mattermost-plugin-boards-*
-rm prepackaged_plugins/mattermost-plugin-playbooks-*
-rm prepackaged_plugins/mattermost-plugin-gitlab-*
-rm prepackaged_plugins/mattermost-plugin-mscalendar-*
+rm ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-msteams-*
+rm ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-boards-*
+rm ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-playbooks-*
+rm ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-gitlab-*
+rm ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-mscalendar-*
 
 mkdir -p ${BUILD_DIR}/data/
