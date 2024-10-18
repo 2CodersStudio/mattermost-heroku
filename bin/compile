@@ -12,10 +12,17 @@ echo "-----> Build DIR: ${BUILD_DIR}"
 echo "-----> Cache DIR: ${CACHE_DIR}"
 echo "-----> Env DIR: ${ENV_DIR}"
 echo "-----> Mattermost URI: ${MATTERMOST_DOWNLOAD_URI}"
-echo "-----> Current DIR: ${pwd}"
+echo "-----> Current DIR:"
+pwd
 
 echo "-----> Retrieving mattermost tar from ${DOWNLOAD_URI}"
 curl -s -L "${DOWNLOAD_URI}" | tar -zxf - --strip-components=1 -C ${BUILD_DIR}
 
+echo "-----> Remove large plugins not required"
+rm prepackaged_plugins/mattermost-plugin-msteams-*
+rm prepackaged_plugins/mattermost-plugin-boards-*
+rm prepackaged_plugins/mattermost-plugin-playbooks-*
+rm prepackaged_plugins/mattermost-plugin-gitlab-*
+rm prepackaged_plugins/mattermost-plugin-mscalendar-*
 
 mkdir -p ${BUILD_DIR}/data/
