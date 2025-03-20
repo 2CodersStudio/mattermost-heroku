@@ -18,11 +18,17 @@ pwd
 echo "-----> Retrieving mattermost tar from ${DOWNLOAD_URI}"
 curl -s -L "${DOWNLOAD_URI}" | tar -zxf - --strip-components=1 -C ${BUILD_DIR}
 
-echo "-----> Remove large plugins not required"
-rm ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-msteams-*
-rm ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-boards-*
-rm ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-playbooks-*
-rm ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-gitlab-*
-rm ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-mscalendar-*
+
+echo "-----> Removing unnecessary prepackaged plugins"
+rm -f ${BUILD_DIR}/prepackaged_plugins/focalboard-*
+rm -f ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-boards-*
+rm -f ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-github-*
+rm -f ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-gitlab-*
+rm -f ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-mscalendar-*
+rm -f ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-msteams-*
+rm -f ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-nps-*
+rm -f ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-playbooks-*
+rm -f ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-servicenow-*
+rm -f ${BUILD_DIR}/prepackaged_plugins/mattermost-plugin-zoom-*
 
 mkdir -p ${BUILD_DIR}/data/
